@@ -1,0 +1,18 @@
+#include <iostream>
+#include <algorithm>
+using namespace std;
+int main ()
+{
+    int a;
+    char abc[] = "123456789";
+    cin>>a;
+    abc[a]='\0';
+
+
+
+    std::sort (abc,abc+a);
+    do {
+        cout<<abc<<" ";
+       } while ( std::next_permutation(abc,abc+a) );
+    return 0;
+}
